@@ -1,18 +1,21 @@
 # FoodHub-Order-Analysis-using-Python
-### Background
-An online news portal aims to expand its business by acquiring new subscribers. Every visitor to the website takes certain actions based on their interest. The company plans to analyze these interests and wants to determine whether a new feature will be effective or not. 100 users are divided equally into two groups. The old landing page is served to the first group (control group) and the new landing page is served to the second group (treatment group). Various data about the customers in both groups are collected in 'abtest.csv'.
+### Context
+The number of restaurants in New York is increasing day by day. Lots of students and busy professionals rely on those restaurants due to their hectic lifestyles. Online food delivery service is a great option for them. It provides them with good food from their favorite restaurants. A food aggregator company FoodHub offers access to multiple restaurants through a single smartphone app.
+The app allows the restaurants to receive a direct online order from a customer. The app assigns a delivery person from the company to pick up the order after it is confirmed by the restaurant. The delivery person then uses the map to reach the restaurant and waits for the food package. Once the food package is handed over to the delivery person, he/she confirms the pick-up in the app and travels to the customer's location to deliver the food. The delivery person confirms the drop-off in the app after delivering the food package to the customer. The customer can rate the order in the app. The food aggregator earns money by collecting a fixed margin of the delivery order from the restaurants.
 
-### Objective:
-Explore the dataset and extract insights using Exploratory Data Analysis.
-Do the users spend more time on the new landing page than the old landing page?
-Is the conversion rate (the proportion of users who visit the landing page and get converted) for the new page greater than the conversion rate for the old page?
-Does the converted status depend on the preferred language?
-Is the mean time spent on the new page same for the different language users?
+### Objective
+The food aggregator company has stored the data of the different orders made by the registered customers in their online portal. They want to analyze the data to get a fair idea about the demand of different restaurants which will help them in enhancing their customer experience. Perform data analysis to find answers to these questions that will help the company to improve business.
 
-### Data Dictionary:
-user_id - This represents the user ID of the person visiting the website.
-group - This represents whether the user belongs to the first group (control) or the second group (treatment).
-landing_page - This represents whether the landing page is new or old.
-time_spent_on_the_page - This represents the time (in minutes) spent by the user on the landing page.
-converted - This represents whether the user gets converted to a subscriber of the news portal or not.
-language_preferred - This represents the language chosen by the user to view the landing page.
+### Data Description
+The dataset contains info related to a food order. The detailed data dictionary is given below.
+
+### Data Dictionary
+order_id: Unique ID of the order
+customer_id: ID of the customer who ordered the food
+restaurant_name: Name of the restaurant
+cuisine_type: Cuisine ordered by the customer
+cost: Cost of the order
+day_of_the_week: Indicates whether the order is placed on a weekday or weekend (The weekday is from Monday to Friday and the weekend is Saturday and Sunday)
+rating: Rating given by the customer out of 5
+food_preparation_time: Time (in minutes) taken by the restaurant to prepare the food. This is calculated by taking the difference between the timestamps of the restaurant's order confirmation and the delivery person's pick-up confirmation.
+delivery_time: Time (in minutes) taken by the delivery person to deliver the food package. This is calculated by taking the difference between the timestamps of the delivery person's pick-up confirmation and drop-off information
